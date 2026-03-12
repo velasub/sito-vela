@@ -26,7 +26,16 @@
 
   /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10,22,40,0.96); backdrop-filter: blur(12px); padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(201,168,76,0.2); }
-  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--gold-light); letter-spacing: 0.03em; line-height: 1.2; max-width: 200px; text-decoration: none; }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--gold-light);
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    max-width: 200px;
+    text-decoration: none;
+  }
   .hamburger { background: none; border: 1px solid rgba(201,168,76,0.4); cursor: pointer; padding: 8px; border-radius: 4px; display: flex; flex-direction: column; gap: 5px; }
   .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--gold-light); transition: all 0.3s; }
   .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
