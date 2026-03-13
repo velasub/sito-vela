@@ -1,455 +1,193 @@
-DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Private sailing tours along the Amalfi Coast & Sorrento aboard exclusive yachts. Book directly with our expert skippers for an authentic Mediterranean experience.">
-<title>Sailing to Amalfi and Sorrento Coast</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root {
---navy: #0a1628;
---deep-blue: #122244;
---sea: #1a4a7a;
---azure: #2d7dd2;
---gold: #c9a84c;
---gold-light: #e8c97a;
---cream: #f7f3ec;
---white: #ffffff;
---text-dark: #1a1a2e;
---text-mid: #3d4a5c;
---text-light: #8a9ab5;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text-dark); font-weight: 300; overflow-x: hidden; }
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="description" content="Private sailing tours along the Amalfi Coast & Sorrento aboard exclusive yachts. Book directly with our expert skippers for an authentic Mediterranean experience."> 
+<title>Sailing to Amalfi and Sorrento Coast</title> 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"> 
+<style> 
+:root { 
+--navy: #0a1628; 
+--deep-blue: #122244; 
+--sea: #1a4a7a; 
+--azure: #2d7dd2; 
+--gold: #c9a84c; 
+--gold-light: #e8c97a; 
+--cream: #f7f3ec; 
+--white: #ffffff; 
+--text-dark: #1a1a2e; 
+--text-mid: #3d4a5c; 
+--text-light: #8a9ab5; 
+} 
+* { margin: 0; padding: 0; box-sizing: border-box; } 
+html { scroll-behavior: smooth; } 
+body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text-dark); font-weight: 300; overflow-x: hidden; } 
 
-/* NAV */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10,22,40,0.96); backdrop-filter: blur(12px); padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(201,168,76,0.2); }
-.nav-logo {
-font-family: 'Cormorant Garamond', serif;
-font-size: 0.85rem;
-font-weight: 400;
-color: var(--gold-light);
-letter-spacing: 0.03em;
-line-height: 1.2;
-max-width: 200px;
-text-decoration: none;
-}
-.hamburger { background: none; border: 1px solid rgba(201,168,76,0.4); cursor: pointer; padding: 8px; border-radius: 4px; display: flex; flex-direction: column; gap: 5px; }
-.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--gold-light); transition: all 0.3s; }
-.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-.nav-menu { position: fixed; top: 64px; left: 0; right: 0; background: var(--navy); padding: 1rem 0 2rem; transform: translateY(-110%); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); z-index: 999; border-bottom: 1px solid rgba(201,168,76,0.2); }
-.nav-menu.open { transform: translateY(0); }
-.nav-menu a { display: block; padding: 0.85rem 2rem; color: rgba(247,243,236,0.85); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.05); transition: color 0.2s, padding-left 0.2s; }
-.nav-menu a:hover { color: var(--gold-light); padding-left: 2.5rem; }
+/* NAV - MODIFICATA A 100PX */ 
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10,22,40,0.96); backdrop-filter: blur(12px); padding: 0 1.5rem; height: 100px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(201,168,76,0.2); } 
+.nav-logo { 
+font-family: 'Cormorant Garamond', serif; 
+font-size: 1.1rem; 
+font-weight: 400; 
+color: var(--gold-light); 
+text-transform: uppercase;
+letter-spacing: 0.05em; 
+text-decoration: none; 
+display: flex; 
+flex-direction: column; 
+align-items: center; 
+line-height: 1.1;
+} 
+.hamburger { background: none; border: 1px solid rgba(201,168,76,0.4); cursor: pointer; padding: 8px; border-radius: 4px; display: flex; flex-direction: column; gap: 5px; } 
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--gold-light); transition: all 0.3s; } 
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); } 
+.hamburger.open span:nth-child(2) { opacity: 0; } 
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); } 
+.nav-menu { position: fixed; top: 100px; left: 0; right: 0; background: var(--navy); padding: 1rem 0 2rem; transform: translateY(-110%); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); z-index: 999; border-bottom: 1px solid rgba(201,168,76,0.2); } 
+.nav-menu.open { transform: translateY(0); } 
+.nav-menu a { display: flex; flex-direction: column; align-items: center; padding: 0.85rem 2rem; color: rgba(247,243,236,0.85); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid rgba(201,168,76,0.15); transition: color 0.2s; } 
+.nav-menu a:hover { color: var(--gold-light); } 
 
-/* HERO */
-.hero { margin-top: 64px; position: relative; height: 92vh; min-height: 500px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,22,40,0.3) 0%, rgba(10,22,40,0.5) 50%, rgba(10,22,40,0.85) 100%); }
-.hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem 1.5rem; max-width: 700px; animation: fadeUp 1.2s ease both; }
-.hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 8vw, 4.5rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: 0.02em; }
-.hero-content h1 em { font-style: italic; color: var(--gold-light); }
-.hero-tagline { font-size: clamp(0.85rem, 2.5vw, 1rem); color: rgba(247,243,236,0.85); letter-spacing: 0.08em; line-height: 1.7; margin-bottom: 2.5rem; font-weight: 300; }
-.hero-cta { display: inline-block; padding: 1rem 2.5rem; border: 1px solid var(--gold); color: var(--gold-light); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: background 0.3s, color 0.3s; }
-.hero-cta:hover { background: var(--gold); color: var(--navy); }
-.scroll-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px; animation: bounce 2s infinite; }
-.scroll-hint span { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(247,243,236,0.5); }
-.scroll-arrow { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(201,168,76,0.8), transparent); }
+/* HERO - MARGINE AGGIUSTATO A 100PX */ 
+.hero { margin-top: 100px; position: relative; height: 92vh; min-height: 500px; overflow: hidden; display: flex; align-items: center; justify-content: center; } 
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; } 
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,22,40,0.3) 0%, rgba(10,22,40,0.5) 50%, rgba(10,22,40,0.85) 100%); } 
+.hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem 1.5rem; max-width: 700px; animation: fadeUp 1.2s ease both; } 
+.hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 8vw, 4.5rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: 0.02em; } 
+.hero-content h1 em { font-style: italic; color: var(--gold-light); } 
+.hero-tagline { font-size: clamp(0.85rem, 2.5vw, 1rem); color: rgba(247,243,236,0.85); letter-spacing: 0.08em; line-height: 1.7; margin-bottom: 2.5rem; font-weight: 300; } 
+.hero-cta { display: inline-block; padding: 1rem 2.5rem; border: 1px solid var(--gold); color: var(--gold-light); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: background 0.3s, color 0.3s; } 
+.hero-cta:hover { background: var(--gold); color: var(--navy); } 
+.scroll-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px; animation: bounce 2s infinite; } 
+.scroll-hint span { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(247,243,236,0.5); } 
+.scroll-arrow { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(201,168,76,0.8), transparent); } 
 
-/* SECTIONS */
-.section-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; display: block; }
-h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 6vw, 2.8rem); font-weight: 300; line-height: 1.2; color: var(--navy); margin-bottom: 1.25rem; }
-h2 em { font-style: italic; color: var(--sea); }
-p { font-size: 0.95rem; line-height: 1.8; color: var(--text-mid); margin-bottom: 1rem; }
-.gold-line { width: 50px; height: 1px; background: var(--gold); margin: 1.5rem auto; }
+/* RESTO DEL CSS INALTERATO */
+.section-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; display: block; } 
+h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 6vw, 2.8rem); font-weight: 300; line-height: 1.2; color: var(--navy); margin-bottom: 1.25rem; } 
+h2 em { font-style: italic; color: var(--sea); } 
+p { font-size: 0.95rem; line-height: 1.8; color: var(--text-mid); margin-bottom: 1rem; } 
+.gold-line { width: 50px; height: 1px; background: var(--gold); margin: 1.5rem auto; } 
+.value-banner { padding: 3rem 1.5rem; text-align: center; } 
+.value-banner h2 { color: var(--cream); margin-bottom: 1rem; } 
+.value-banner p { color: rgba(247,243,236,0.8); max-width: 600px; margin: 0 auto 1rem; } 
+.photo-block { position: relative; overflow: hidden; } 
+.photo-block img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.6s ease; } 
+.photo-block:hover img { transform: scale(1.04); } 
+.photo-caption { padding: 1.25rem 1.5rem; background: var(--navy); color: rgba(247,243,236,0.8); font-size: 0.85rem; line-height: 1.6; } 
+.fleet-section { background: #f0ece4; padding: 4rem 1.5rem; } 
+.fleet-card { background: var(--white); margin-bottom: 2rem; overflow: hidden; box-shadow: 0 4px 24px rgba(10,22,40,0.08); } 
+.fleet-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; } 
+.fleet-card-body { padding: 1.75rem 1.5rem; } 
+.fleet-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; color: var(--navy); margin-bottom: 0.5rem; } 
+.specs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; } 
+.spec-tag { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border: 1px solid rgba(10,22,40,0.15); color: var(--text-mid); border-radius: 2px; } 
+.btn-outline { display: inline-block; margin-top: 1.25rem; padding: 0.75rem 1.75rem; border: 1px solid var(--navy); color: var(--navy); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; transition: background 0.3s, color 0.3s; } 
+.btn-outline:hover { background: var(--navy); color: var(--white); } 
+.btn-gold { display: inline-block; margin-top: 1.25rem; padding: 0.75rem 1.75rem; background: var(--gold); color: var(--navy); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: background 0.3s; } 
+.btn-gold:hover { background: var(--gold-light); } 
+.quote-section { background: var(--deep-blue); padding: 4rem 1.5rem; text-align: center; } 
+blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 4vw, 1.9rem); font-weight: 300; font-style: italic; color: var(--cream); line-height: 1.5; max-width: 650px; margin: 0 auto 1.5rem; } 
+cite { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-style: normal; } 
+.contact-section { background: var(--cream); padding: 4rem 1.5rem; } 
+.form-group { margin-bottom: 1.25rem; } 
+label { display: block; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 0.4; } 
+input, textarea { width: 100%; padding: 0.85rem 1rem; border: 1px solid rgba(10,22,40,0.15); background: var(--white); font-family: 'Jost', sans-serif; font-size: 0.9rem; color: var(--text-dark); outline: none; transition: border-color 0.2s; border-radius: 2px; } 
+input:focus, textarea:focus { border-color: var(--azure); } 
+textarea { resize: vertical; min-height: 120px; } 
+button[type=submit] { width: 100%; padding: 1rem; background: var(--navy); color: var(--gold-light); border: none; font-family: 'Jost', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: background 0.3s; margin-top: 0.5rem; } 
+button[type=submit]:hover { background: var(--sea); } 
+footer { background: var(--navy); padding: 3rem 1.5rem 2rem; border-top: 1px solid rgba(201,168,76,0.2); } 
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem; } 
+footer h4 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: var(--gold-light); margin-bottom: 1rem; letter-spacing: 0.05em; } 
+footer p, footer a { font-size: 0.82rem; color: rgba(247,243,236,0.6); line-height: 1.8; text-decoration: none; display: block; } 
+footer a:hover { color: var(--gold-light); } 
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; text-align: center; font-size: 0.72rem; color: rgba(247,243,236,0.3); } 
+.dest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 2rem; } 
+.dest-item { position: relative; overflow: hidden; } 
+.dest-item img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; transition: transform 0.5s; } 
+.dest-item:hover img { transform: scale(1.07); } 
+.dest-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 0.75rem; background: linear-gradient(transparent, rgba(10,22,40,0.85)); color: var(--cream); font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; } 
+.reservation-section { background: linear-gradient(135deg, var(--navy) 0%, var(--sea) 100%); padding: 4rem 1.5rem; text-align: center; } 
+.reservation-section h2 { color: var(--cream); } 
+.reservation-section p { color: rgba(247,243,236,0.7); max-width: 500px; margin: 0 auto 2rem; } 
+.boat-links { display: flex; flex-direction: column; gap: 1rem; max-width: 400px; margin: 0 auto; } 
+.boat-link { display: block; padding: 1.1rem 2rem; border: 1px solid rgba(201,168,76,0.5); color: var(--gold-light); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.3s, border-color 0.3s; } 
+.boat-link:hover { background: rgba(201,168,76,0.1); border-color: var(--gold); } 
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } } 
+@keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } } 
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; } 
+.fade-in.visible { opacity: 1; transform: translateY(0); } 
+@media (min-width: 640px) { 
+.dest-grid { grid-template-columns: repeat(3, 1fr); } 
+.footer-grid { grid-template-columns: 1fr 1fr; } 
+.boat-links { flex-direction: row; flex-wrap: wrap; justify-content: center; } 
+.photo-grid { grid-template-columns: 1fr 1fr; } 
+} 
+@media (min-width: 1024px) { 
+.fleet-section { padding: 5rem 4rem; } 
+.fleet-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; } 
+.fleet-card { margin-bottom: 0; } 
+.dest-grid { grid-template-columns: repeat(4, 1fr); } 
+.footer-grid { grid-template-columns: 1fr 1fr 1fr; } 
+nav { padding: 0 4rem; } 
+.hamburger { display: none; } 
+.nav-menu { position: static; background: none; transform: none; padding: 0; display: flex; gap: 0; border: none; } 
+.nav-menu a { padding: 0 1rem; border: none; font-size: 0.72rem; color: rgba(247,243,236,0.7); flex-direction: row; } 
+.nav-menu a:hover { padding-left: 1rem; color: var(--gold-light); } 
+.skipper-grid { grid-template-columns: repeat(3, 1fr) !important; } 
+.value-banner { padding: 5rem 4rem; } 
+.quote-section { padding: 5rem 4rem; } 
+.reservation-section { padding: 5rem 4rem; } 
+.contact-section { padding: 5rem 4rem; } 
+} 
+</style> 
+</head> 
+<body> 
 
-/* VALUE BANNER */
-.value-banner { padding: 3rem 1.5rem; text-align: center; }
-.value-banner h2 { color: var(--cream); margin-bottom: 1rem; }
-.value-banner p { color: rgba(247,243,236,0.8); max-width: 600px; margin: 0 auto 1rem; }
+<nav> 
+<a href="#" class="nav-logo">
+    <span>Sailing to Amalfi</span>
+    <span>&amp; Sorrento Coast</span>
+</a> 
+<button class="hamburger" id="hamburger" aria-label="Menu"> 
+<span></span><span></span><span></span> 
+</button> 
+<div class="nav-menu" id="navMenu"> 
+<a href="#">Home</a> 
+<a href="#fleet">Our Fleet</a> 
+<a href="#about">About Us</a> 
+<a href="#destinations">Where We Sail</a> 
+<a href="#contact">Plan Your Voyage</a> 
+<a href="#reservation">Reservation</a> 
+</div> 
+</nav> 
 
-/* PHOTO SECTION */
-.photo-block { position: relative; overflow: hidden; }
-.photo-block img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.6s ease; }
-.photo-block:hover img { transform: scale(1.04); }
-.photo-caption { padding: 1.25rem 1.5rem; background: var(--navy); color: rgba(247,243,236,0.8); font-size: 0.85rem; line-height: 1.6; }
+<div class="hero"> 
+<img class="hero-img" src="foto/hero.jpg" alt="Sailing the Amalfi Coast"> 
+<div class="hero-overlay"></div> 
+<div class="hero-content"> 
+<h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,8vw,4.5rem); font-weight:300; color:#fff; line-height:1.15; margin-bottom:1.5rem;">Set sail with us and lose yourself in the <em style="font-style:italic; color:var(--gold-light);">endless blue</em></h1> 
+<p style="font-size:clamp(0.85rem,2.5vw,1rem); color:rgba(247,243,236,0.85); letter-spacing:0.08em; line-height:1.7; margin-bottom:2.5rem;">Your unforgettable journey begins here.<br>Discover the wonders of the Sorrento &amp; Amalfi Coast aboard our exclusive sailing yachts.</p> 
+<a href="#fleet" style="display:inline-block; padding:1rem 2.5rem; border:1px solid var(--gold); color:var(--gold-light); text-decoration:none; font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase;">Explore Our Fleet</a> 
+</div> 
+<div class="scroll-hint"> 
+<span style="font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(247,243,236,0.5);">Scroll</span> 
+<div class="scroll-arrow"></div> 
+</div> 
+</div> 
 
-/* FLEET */
-.fleet-section { background: #f0ece4; padding: 4rem 1.5rem; }
-.fleet-card { background: var(--white); margin-bottom: 2rem; overflow: hidden; box-shadow: 0 4px 24px rgba(10,22,40,0.08); }
-.fleet-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
-.fleet-card-body { padding: 1.75rem 1.5rem; }
-.fleet-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; color: var(--navy); margin-bottom: 0.5rem; }
-.specs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
-.spec-tag { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border: 1px solid rgba(10,22,40,0.15); color: var(--text-mid); border-radius: 2px; }
-.btn-outline { display: inline-block; margin-top: 1.25rem; padding: 0.75rem 1.75rem; border: 1px solid var(--navy); color: var(--navy); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; transition: background 0.3s, color 0.3s; }
-.btn-outline:hover { background: var(--navy); color: var(--white); }
-.btn-gold { display: inline-block; margin-top: 1.25rem; padding: 0.75rem 1.75rem; background: var(--gold); color: var(--navy); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: background 0.3s; }
-.btn-gold:hover { background: var(--gold-light); }
+<script> 
+const btn = document.getElementById('hamburger'); 
+const menu = document.getElementById('navMenu'); 
+btn.addEventListener('click', () => { btn.classList.toggle('open'); menu.classList.toggle('open'); }); 
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { btn.classList.remove('open'); menu.classList.remove('open'); })); 
+const observer = new IntersectionObserver((entries) => { 
+entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); 
+}, { threshold: 0.1 }); 
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el)); 
+</script> 
 
-/* QUOTE */
-.quote-section { background: var(--deep-blue); padding: 4rem 1.5rem; text-align: center; }
-blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 4vw, 1.9rem); font-weight: 300; font-style: italic; color: var(--cream); line-height: 1.5; max-width: 650px; margin: 0 auto 1.5rem; }
-cite { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-style: normal; }
-
-/* CONTACT */
-.contact-section { background: var(--cream); padding: 4rem 1.5rem; }
-.form-group { margin-bottom: 1.25rem; }
-label { display: block; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 0.4rem; }
-input, textarea { width: 100%; padding: 0.85rem 1rem; border: 1px solid rgba(10,22,40,0.15); background: var(--white); font-family: 'Jost', sans-serif; font-size: 0.9rem; color: var(--text-dark); outline: none; transition: border-color 0.2s; border-radius: 2px; }
-input:focus, textarea:focus { border-color: var(--azure); }
-textarea { resize: vertical; min-height: 120px; }
-button[type=submit] { width: 100%; padding: 1rem; background: var(--navy); color: var(--gold-light); border: none; font-family: 'Jost', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: background 0.3s; margin-top: 0.5rem; }
-button[type=submit]:hover { background: var(--sea); }
-
-/* FOOTER */
-footer { background: var(--navy); padding: 3rem 1.5rem 2rem; border-top: 1px solid rgba(201,168,76,0.2); }
-.footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem; }
-footer h4 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: var(--gold-light); margin-bottom: 1rem; letter-spacing: 0.05em; }
-footer p, footer a { font-size: 0.82rem; color: rgba(247,243,236,0.6); line-height: 1.8; text-decoration: none; display: block; }
-footer a:hover { color: var(--gold-light); }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; text-align: center; font-size: 0.72rem; color: rgba(247,243,236,0.3); }
-
-/* DESTINATIONS */
-.dest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 2rem; }
-.dest-item { position: relative; overflow: hidden; }
-.dest-item img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; transition: transform 0.5s; }
-.dest-item:hover img { transform: scale(1.07); }
-.dest-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 0.75rem; background: linear-gradient(transparent, rgba(10,22,40,0.85)); color: var(--cream); font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; }
-
-/* RESERVATION */
-.reservation-section { background: linear-gradient(135deg, var(--navy) 0%, var(--sea) 100%); padding: 4rem 1.5rem; text-align: center; }
-.reservation-section h2 { color: var(--cream); }
-.reservation-section p { color: rgba(247,243,236,0.7); max-width: 500px; margin: 0 auto 2rem; }
-.boat-links { display: flex; flex-direction: column; gap: 1rem; max-width: 400px; margin: 0 auto; }
-.boat-link { display: block; padding: 1.1rem 2rem; border: 1px solid rgba(201,168,76,0.5); color: var(--gold-light); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.3s, border-color 0.3s; }
-.boat-link:hover { background: rgba(201,168,76,0.1); border-color: var(--gold); }
-
-/* ANIMATIONS */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
-.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
-
-/* TABLET */
-@media (min-width: 640px) {
-.dest-grid { grid-template-columns: repeat(3, 1fr); }
-.footer-grid { grid-template-columns: 1fr 1fr; }
-.boat-links { flex-direction: row; flex-wrap: wrap; justify-content: center; }
-.photo-grid { grid-template-columns: 1fr 1fr; }
-}
-
-/* DESKTOP */
-@media (min-width: 1024px) {
-.fleet-section { padding: 5rem 4rem; }
-.fleet-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-.fleet-card { margin-bottom: 0; }
-.dest-grid { grid-template-columns: repeat(4, 1fr); }
-.footer-grid { grid-template-columns: 1fr 1fr 1fr; }
-nav { padding: 0 4rem; }
-.hamburger { display: none; }
-.nav-menu { position: static; background: none; transform: none; padding: 0; display: flex; gap: 0; border: none; }
-.nav-menu a { padding: 0 1rem; border: none; font-size: 0.72rem; color: rgba(247,243,236,0.7); }
-.nav-menu a:hover { padding-left: 1rem; color: var(--gold-light); }
-.skipper-grid { grid-template-columns: repeat(3, 1fr) !important; }
-.value-banner { padding: 5rem 4rem; }
-.quote-section { padding: 5rem 4rem; }
-.reservation-section { padding: 5rem 4rem; }
-.contact-section { padding: 5rem 4rem; }
-}
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-<a href="#" class="nav-logo">Sailing · Amalfi &amp; Sorrento</a>
-<button class="hamburger" id="hamburger" aria-label="Menu">
-<span></span><span></span><span></span>
-</button>
-<div class="nav-menu" id="navMenu">
-<a href="#">Home</a>
-<a href="#fleet">Our Fleet</a>
-<a href="#about">About Us</a>
-<a href="#destinations">Where We Sail</a>
-<a href="#contact">Plan Your Voyage</a>
-<a href="#reservation">Reservation</a>
-</div>
-</nav>
-
-<!-- HERO -->
-<div style="margin-top:64px; position:relative; height:92vh; min-height:500px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
-<img style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" src="foto/hero.jpg" alt="Sailing the Amalfi Coast">
-<div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(10,22,40,0.3) 0%, rgba(10,22,40,0.5) 50%, rgba(10,22,40,0.85) 100%);"></div>
-<div style="position:relative; z-index:2; text-align:center; padding:2rem 1.5rem; max-width:700px; animation:fadeUp 1.2s ease both;">
-<h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,8vw,4.5rem); font-weight:300; color:#fff; line-height:1.15; margin-bottom:1.5rem;">Set sail with us and lose yourself in the <em style="font-style:italic; color:var(--gold-light);">endless blue</em></h1>
-<p style="font-size:clamp(0.85rem,2.5vw,1rem); color:rgba(247,243,236,0.85); letter-spacing:0.08em; line-height:1.7; margin-bottom:2.5rem;">Your unforgettable journey begins here.<br>Discover the wonders of the Sorrento &amp; Amalfi Coast aboard our exclusive sailing yachts.</p>
-<a href="#fleet" style="display:inline-block; padding:1rem 2.5rem; border:1px solid var(--gold); color:var(--gold-light); text-decoration:none; font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase;">Explore Our Fleet</a>
-</div>
-<div style="position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:8px; animation:bounce 2s infinite;">
-<span style="font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(247,243,236,0.5);">Scroll</span>
-<div style="width:1px; height:40px; background:linear-gradient(to bottom, rgba(201,168,76,0.8), transparent);"></div>
-</div>
-</div>
-
-<!-- VALUE BANNER -->
-<div class="value-banner" style="background-image:url('foto/hero2.jpg'); background-size:cover; background-position:center; position:relative;">
-<div style="position:absolute; inset:0; background:rgba(10,22,40,0.65);"></div>
-<div style="max-width:700px; margin:0 auto; position:relative; z-index:1;">
-<span class="section-label">Why Book Direct</span>
-<h2 style="color:var(--cream);">Direct access, <em style="color:var(--gold-light);">authentic experiences</em>, and better value</h2>
-<div class="gold-line"></div>
-<p>By booking directly with us, you cut out the middleman — ensuring significant savings without compromising the premium quality and service you expect.</p>
-<p>We are dedicated to providing superior quality, impeccable service, and an unparalleled sailing experience. To us, you aren't just a guest — <strong style="color:var(--gold-light); font-weight:400;">you're a friend.</strong></p>
-</div>
-</div>
-
-<!-- SECOND IMAGE -->
-<div style="overflow:hidden; aspect-ratio:16/7;">
-<img src="foto/navigazione.jpeg" alt="Sailing Experience" style="width:100%; height:100%; object-fit:cover; display:block;">
-</div>
-
-<!-- FLEET -->
-<div id="fleet" class="fleet-section">
-<div style="max-width:1200px; margin:0 auto;">
-<span class="section-label">Our Fleet</span>
-<h2>Experience <em>Our Fleet</em></h2>
-<p>Our exclusively curated fleet is designed to meet your specific needs. Every vessel reflects our commitment to comfort, safety, and style — with real-time availability and clear, straightforward pricing.</p>
-
-<div class="fleet-cards" style="margin-top:2.5rem;">
-
-<!-- Gaudes -->
-<div class="fleet-card fade-in">
-<img src="foto/gaudes-1.jpeg" alt="Gaudes yacht">
-<div class="fleet-card-body">
-<h3>Gaudes</h3>
-<p style="font-size:0.85rem; color:var(--gold); letter-spacing:0.05em;">12 metres · Up to 6 guests</p>
-<div class="specs">
-<span class="spec-tag">3 Cabins</span>
-<span class="spec-tag">2 Bathrooms</span>
-<span class="spec-tag">Full Galley</span>
-<span class="spec-tag">Hot Showers</span>
-</div>
-<p>The perfect harmony of performance and relaxation. An intimate sanctuary at sea for those who seek balance between exhilaration and pure unhurried comfort.</p>
-<a href="https://www.sailing-to-amalfi-and-sorrento-coast.com/foto-gaudes" class="btn-outline">More Pictures</a>
-</div>
-</div>
-
-<!-- Nero Nencis -->
-<div class="fleet-card fade-in">
-<img src="foto/neronencis-1.jpeg" alt="Nero Nencis yacht">
-<div class="fleet-card-body">
-<h3>Nero Nencis</h3>
-<p style="font-size:0.85rem; color:var(--gold); letter-spacing:0.05em;">16 metres · Up to 8 guests</p>
-<div class="specs">
-<span class="spec-tag">5 Cabins</span>
-<span class="spec-tag">3 Bathrooms</span>
-<span class="spec-tag">Air Conditioning</span>
-<span class="spec-tag">Wi-Fi 10GB/day</span>
-<span class="spec-tag">Smart TV</span>
-<span class="spec-tag">Alexa</span>
-</div>
-<p>Unparalleled luxury for those who demand the ultimate harmony between the thrill of the open sea and the comfort of a floating estate.</p>
-<a href="https://www.sailing-to-amalfi-and-sorrento-coast.com/foto-nero-nencis" class="btn-outline">More Pictures</a>
-</div>
-</div>
-
-<!-- Wa Tha -->
-<div class="fleet-card fade-in">
-<img src="foto/watha-1.jpg" alt="Wa Tha yacht">
-<div class="fleet-card-body">
-<h3>Wa Tha</h3>
-<p style="font-size:0.85rem; color:var(--gold); letter-spacing:0.05em;">Up to 6 guests</p>
-<div class="specs">
-<span class="spec-tag">3 Cabins</span>
-<span class="spec-tag">2 Bathrooms</span>
-<span class="spec-tag">Modern Galley</span>
-<span class="spec-tag">Hot Showers</span>
-</div>
-<p>Excellence in every detail. Designed for those who appreciate the finer things in life, with complete privacy and your own dedicated skipper.</p>
-<a href="https://www.sailing-to-amalfi-and-sorrento-coast.com/foto-wa-tha" class="btn-outline">More Pictures</a>
-</div>
-</div>
-
-</div>
-<div style="text-align:center; margin-top:2.5rem;">
-<a href="#reservation" class="btn-gold">Check Availability &amp; Pricing →</a>
-</div>
-</div>
-</div>
-
-<!-- QUOTE 1 -->
-<div class="quote-section">
-<div class="gold-line"></div>
-<blockquote>"A sailing experience that exceeded every expectation. Professionalism and breathtaking landscapes made our vacation truly unforgettable. Beyond the sights, a genuine friendship was born with our skipper."</blockquote>
-<div class="gold-line"></div>
-<cite>— Mark &amp; Lisa</cite>
-</div>
-
-<!-- DESTINATIONS -->
-<div id="destinations" style="background:var(--navy); padding:0;">
-<div style="padding:4rem 1.5rem 1.5rem; max-width:1200px; margin:0 auto;">
-<span class="section-label">Where We Sail</span>
-<h2 style="color:var(--cream);">Legends, <em>stories</em> &amp; hidden wonders</h2>
-<p style="color:rgba(247,243,236,0.7);">Every destination has a story. Our skippers don't just navigate — they share the myths, flavors, and secrets of each place as if welcoming you into their own home.</p>
-</div>
-
-<div class="dest-grid" style="padding:0 3px; max-width:1200px; margin:0 auto;">
-<div class="dest-item"><img src="foto/capri.jpg" alt="Capri"><div class="dest-overlay">Capri</div></div>
-<div class="dest-item"><img src="foto/ischia.jpg" alt="Ischia"><div class="dest-overlay">Ischia</div></div>
-<div class="dest-item"><img src="foto/amalfi.jpg" alt="Amalfi"><div class="dest-overlay">Amalfi</div></div>
-<div class="dest-item"><img src="foto/positano.jpeg" alt="Positano"><div class="dest-overlay">Positano</div></div>
-<div class="dest-item"><img src="foto/procida.jpg" alt="Procida"><div class="dest-overlay">Procida</div></div>
-<div class="dest-item"><img src="foto/nerano.jpeg" alt="Nerano"><div class="dest-overlay">Nerano</div></div>
-<div class="dest-item"><img src="foto/atrani.jpg" alt="Atrani"><div class="dest-overlay">Atrani</div></div>
-<div class="dest-item"><img src="foto/forio.jpg" alt="Ischia Forio"><div class="dest-overlay">Forio</div></div>
-</div>
-
-<!-- Extra photos with captions -->
-<div class="photo-grid" style="max-width:1200px; margin:1.5rem auto 0; padding:0 3px; display:grid; grid-template-columns:1fr; gap:3px;">
-<div class="photo-block">
-<img src="foto/capri-villa.jpeg" alt="Capri Villa San Michele">
-<div class="photo-caption">Capri Villa San Michele — we'll share the story of Axel Munthe and the legend of San Michele's bell.</div>
-</div>
-<div class="photo-block">
-<img src="foto/sirene.jpeg" alt="Scoglio delle Sirene">
-<div class="photo-caption">"Lo Scoglio delle Sirene" — legend says Ulysses met the sirens on these very rocks.</div>
-</div>
-<div class="photo-block">
-<img src="foto/positano2.jpeg" alt="Positano">
-<div class="photo-caption">Positano — where the Dolce Vita begins. Even the city name has an ancient legend.</div>
-</div>
-<div class="photo-block">
-<img src="foto/cetara.jpg" alt="Cetara">
-<div class="photo-caption">Cetara — home of the legendary Anchovy Colatura, heir of ancient Roman Garum.</div>
-</div>
-</div>
-<div style="height:3rem;"></div>
-</div>
-
-<!-- ABOUT / SKIPPERS -->
-<div id="about" style="background:var(--cream); padding:4rem 1.5rem;">
-<div style="max-width:1200px; margin:0 auto;">
-<span class="section-label">About Us</span>
-<h2>Our Passion? <em>Your Journey</em></h2>
-<p>We are a group of friends and expert skippers, united by an unconditional love for the ocean and a deep, lifelong knowledge of the Coast's hidden wonders. Every secluded cove, every cliffside village, and every local flavor is part of our personal history — and we want to share that authentic beauty with you.</p>
-
-<div class="skipper-grid" style="display:grid; grid-template-columns:1fr; gap:2rem; margin-top:3rem;">
-
-<div class="fleet-card fade-in">
-<img src="foto/nicola.jpeg" alt="Nicola - Skipper" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
-<div class="fleet-card-body">
-<h3>Nicola</h3>
-<p style="font-size:0.8rem; color:var(--gold); letter-spacing:0.06em; margin-bottom:0.75rem;">Expert Skipper &amp; Federal Sailing Instructor</p>
-<p>A former surveyor who followed his true calling. Nicola delights in guiding guests through hidden wonders, sharing his deep knowledge of local culture, Mediterranean cuisine, and the finest regional wines.</p>
-</div>
-</div>
-
-<div class="fleet-card fade-in">
-<img src="foto/gianluca.jpg" alt="Gianluca - Skipper" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
-<div class="fleet-card-body">
-<h3>Gianluca</h3>
-<p style="font-size:0.8rem; color:var(--gold); letter-spacing:0.06em; margin-bottom:0.75rem;">Engineer &amp; Passionate Sailor · 20+ years</p>
-<p>With the precision of an engineer and the soul of a sailor, Gianluca brings meticulous care to both navigation and vessel maintenance, ensuring the highest standards of safety and comfort.</p>
-</div>
-</div>
-
-<div class="fleet-card fade-in">
-<img src="foto/vincenzo.jpeg" alt="Vincenzo - Skipper" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
-<div class="fleet-card-body">
-<h3>Vincenzo</h3>
-<p style="font-size:0.8rem; color:var(--gold); letter-spacing:0.06em; margin-bottom:0.75rem;">Construction Executive &amp; Dreamer at Sea</p>
-<p>Whenever he can leave the building sites behind, Vincenzo escapes to the sea. His passion is contagious — he brings the same leadership from his professional life to the deck, ensuring every guest feels the magic of the sailing dream.</p>
-</div>
-</div>
-
-</div>
-</div>
-</div>
-
-<!-- QUOTE 2 -->
-<div class="quote-section" style="background:var(--deep-blue);">
-<div class="gold-line"></div>
-<blockquote>"An indescribable experience! The skipper's deep knowledge of the coast and his genuine kindness made our holiday perfect. We felt right at home from the very first moment."</blockquote>
-<div class="gold-line"></div>
-<cite>— Claire &amp; Laura</cite>
-</div>
-
-<!-- CONTACT -->
-<div id="contact" class="contact-section">
-<div style="max-width:600px; margin:0 auto;">
-<span class="section-label">Plan Your Voyage</span>
-<h2>Your Voyage, <em>Your Way</em></h2>
-<p>Tell us about yourself, your preferences, and your needs. We'll design a personalised itinerary tailored to your unique travel style — no hidden costs, no middlemen.</p>
-<form action="https://www.sailing-to-amalfi-and-sorrento-coast.com/" method="post" style="margin-top:2rem;">
-<div class="form-group">
-<label for="name">Name *</label>
-<input type="text" id="name" name="name" required>
-</div>
-<div class="form-group">
-<label for="email">Email *</label>
-<input type="email" id="email" name="email" required>
-</div>
-<div class="form-group">
-<label for="message">Your Message</label>
-<textarea id="message" name="message" placeholder="Tell us about your dream voyage — dates, number of guests, interests…"></textarea>
-</div>
-<button type="submit">Send My Request</button>
-</form>
-</div>
-</div>
-
-<!-- RESERVATION -->
-<div id="reservation" class="reservation-section">
-<div style="max-width:700px; margin:0 auto;">
-<span class="section-label" style="color:var(--gold);">Book Now</span>
-<h2>Check Availability <em style="color:var(--gold-light);">&amp; Pricing</em></h2>
-<p>Select the boat you'd like to reserve. You'll find availability calendars and clear, transparent daily pricing. Get in touch and we'll plan your perfect journey together.</p>
-<div class="boat-links">
-<a href="https://nionicola.eu.pythonanywhere.com/gaudes" class="boat-link">Gaudes · Nicola</a>
-<a href="https://nionicola.eu.pythonanywhere.com/neronencis" class="boat-link">Nero Nencis · Gianluca</a>
-<a href="https://nionicola.eu.pythonanywhere.com/watha" class="boat-link">Wa Tha · Vincenzo</a>
-</div>
-<p style="margin-top:2rem; font-size:0.8rem; color:rgba(247,243,236,0.45);">Also available on <a href="https://airbnb.it/h/captainnicola" style="color:var(--gold); font-size:0.8rem;">Airbnb →</a></p>
-</div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-<div class="footer-grid" style="max-width:1200px; margin:0 auto 2rem;">
-<div>
-<h4>Sailing · Amalfi &amp; Sorrento</h4>
-<p>A curated group of passionate skippers united by our love for the sea and our commitment to excellence.</p>
-</div>
-<div>
-<h4>Address</h4>
-<p>Via Giuseppe Bonito<br>Castellammare di Stabia (NA)<br>Italia</p>
-</div>
-<div>
-<h4>Contact</h4>
-<a href="mailto:info@sailingtoamalfiandsorrentocoast.com">info@sailingtoamalfiand<br>sorrentocoast.com</a>
-<a href="tel:+393472761733" style="margin-top:0.5rem;">+39 347 276 1733</a>
-</div>
-</div>
-<div class="footer-bottom" style="max-width:1200px; margin:0 auto;">
-© 2026 Sailing to Amalfi and Sorrento Coast · All rights reserved
-</div>
-</footer>
-
-<script>
-const btn = document.getElementById('hamburger');
-const menu = document.getElementById('navMenu');
-btn.addEventListener('click', () => { btn.classList.toggle('open'); menu.classList.toggle('open'); });
-menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { btn.classList.remove('open'); menu.classList.remove('open'); }));
-const observer = new IntersectionObserver((entries) => {
-entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
-
-</body>
+</body> 
 </html>
