@@ -65,8 +65,18 @@
   .nav-menu a:last-child { border-bottom: none; }
   .nav-menu a:hover { color: var(--gold-light); }
 
-  /* HERO - RIPRISTINATO IL TUO STYLE ORIGINALE CON MARGINE 100PX */
-  .hero { margin-top: 100px; position: relative; height: 92vh; min-height: 500px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  /* HERO - Questa configurazione evita che la pagina si blocchi */
+  .hero { 
+    margin-top: 100px; 
+    position: relative; 
+    height: 85vh; /* Usa un valore percentuale flessibile */
+    min-height: 500px; 
+    width: 100%;
+    overflow: hidden; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+  }
   .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,22,40,0.3) 0%, rgba(10,22,40,0.5) 50%, rgba(10,22,40,0.85) 100%); }
   .hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem 1.5rem; max-width: 700px; animation: fadeUp 1.2s ease both; }
