@@ -25,7 +25,21 @@ html { scroll-behavior: smooth; }
 body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text-dark); font-weight: 300; overflow-x: hidden; } 
 
 /* NAV - MODIFICATA A 100PX */ 
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10,22,40,0.96); backdrop-filter: blur(12px); padding: 0 1.5rem; height: 100px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(201,168,76,0.2); } 
+nav { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 1000; 
+  background: rgba(10,22,40,0.96); 
+  backdrop-filter: blur(12px); 
+  padding: 0 1.5rem; 
+  height: 100px; /* Altezza fissa */
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  border-bottom: 1px solid rgba(201,168,76,0.2); 
+} 
 .nav-logo { 
 font-family: 'Cormorant Garamond', serif; 
 font-size: 1.1rem; 
@@ -50,8 +64,16 @@ line-height: 1.1;
 .nav-menu a:hover { color: var(--gold-light); } 
 
 /* HERO - MARGINE AGGIUSTATO A 100PX */ 
-.hero { margin-top: 100px; position: relative; height: 92vh; min-height: 500px; overflow: hidden; display: flex; align-items: center; justify-content: center; } 
-.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; } 
+..hero { 
+  margin-top: 100px; /* Corrisponde esattamente all'altezza della nav */
+  position: relative; 
+  height: calc(100vh - 100px); /* Si adatta allo spazio restante senza sforare */
+  min-height: 500px; 
+  overflow: hidden; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+} 
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,22,40,0.3) 0%, rgba(10,22,40,0.5) 50%, rgba(10,22,40,0.85) 100%); } 
 .hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem 1.5rem; max-width: 700px; animation: fadeUp 1.2s ease both; } 
 .hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 8vw, 4.5rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: 0.02em; } 
