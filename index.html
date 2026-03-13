@@ -24,27 +24,12 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text-dark); font-weight: 300; overflow-x: hidden; }
 
-  /* NAV - AGGIORNATA A 100PX */
-  nav { 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    z-index: 1000; 
-    background: rgba(10,22,40,0.96); 
-    backdrop-filter: blur(12px); 
-    padding: 0 1.5rem; 
-    height: 100px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    border-bottom: 1px solid rgba(201,168,76,0.3); 
-  }
-
-/* LOGO - Entrambe le righe con lo stesso colore oro pieno */
+  /* NAV - MODIFICATA A 100PX */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10,22,40,0.96); backdrop-filter: blur(12px); padding: 0 1.5rem; height: 100px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(201,168,76,0.2); }
+  
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
-    color: var(--gold-light); /* Oro definito nelle variabili */
+    color: var(--gold-light);
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -52,60 +37,36 @@
     text-align: center;
     line-height: 1.1;
   }
-  
-  .nav-logo span:first-child, 
-  .nav-logo span:last-child { 
-    font-size: 1.1rem; 
-    font-weight: 400; 
-    text-transform: uppercase; 
-    letter-spacing: 0.05em;
-    color: var(--gold-light); /* Forza lo stesso colore su entrambe */
-    opacity: 1; /* Rimuove ogni trasparenza */
-    font-style: normal; /* Rimuove il corsivo */
-  }
+  .nav-logo span { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 400; }
+
   .hamburger { background: none; border: 1px solid rgba(201,168,76,0.4); cursor: pointer; padding: 8px; border-radius: 4px; display: flex; flex-direction: column; gap: 5px; }
   .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--gold-light); transition: all 0.3s; }
   .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-  /* MENU MOBILE - CON LINEE DORATE */
-  .nav-menu { 
-    position: fixed; 
-    top: 100px; 
-    left: 0; 
-    right: 0; 
-    background: var(--navy); 
-    padding: 0.5rem 0; 
-    transform: translateY(-120%); 
-    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); 
-    z-index: 999; 
-    border-bottom: 1px solid rgba(201,168,76,0.2); 
-  }
+  .nav-menu { position: fixed; top: 100px; left: 0; right: 0; background: var(--navy); padding: 0; transform: translateY(-110%); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); z-index: 999; border-bottom: 1px solid rgba(201,168,76,0.2); }
   .nav-menu.open { transform: translateY(0); }
   
   .nav-menu a { 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    justify-content: center;
-    padding: 1.2rem 1rem; 
+    padding: 1.2rem 2rem; 
     color: rgba(247,243,236,0.85); 
     text-decoration: none; 
     font-size: 0.85rem; 
     letter-spacing: 0.12em; 
     text-transform: uppercase; 
+    border-bottom: 1px solid rgba(201,168,76,0.15); /* Linea dorata sottile */
+    transition: color 0.2s; 
     text-align: center;
-    line-height: 1.3;
-    /* Linea dorata tra le voci */
-    border-bottom: 1px solid rgba(201,168,76,0.15); 
-    transition: background 0.3s, color 0.3s;
   }
   .nav-menu a:last-child { border-bottom: none; }
-  .nav-menu a:hover { color: var(--gold-light); background: rgba(255,255,255,0.03); }
+  .nav-menu a:hover { color: var(--gold-light); }
 
-  /* HERO */
-  .hero { margin-top: 100px; position: relative; height: calc(100vh - 100px); min-height: 500px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  /* HERO - RIPRISTINATO IL TUO STYLE ORIGINALE CON MARGINE 100PX */
+  .hero { margin-top: 100px; position: relative; height: 92vh; min-height: 500px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
   .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,22,40,0.3) 0%, rgba(10,22,40,0.5) 50%, rgba(10,22,40,0.85) 100%); }
   .hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem 1.5rem; max-width: 700px; animation: fadeUp 1.2s ease both; }
@@ -118,7 +79,7 @@
   .scroll-hint span { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(247,243,236,0.5); }
   .scroll-arrow { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(201,168,76,0.8), transparent); }
 
-  /* SECTIONS & REST OF CSS */
+  /* SECTIONS (Tutto il resto rimane identico al tuo originale) */
   .section-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; display: block; }
   h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 6vw, 2.8rem); font-weight: 300; line-height: 1.2; color: var(--navy); margin-bottom: 1.25rem; }
   h2 em { font-style: italic; color: var(--sea); }
@@ -184,7 +145,6 @@
   .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-  /* TABLET/DESKTOP */
   @media (min-width: 640px) {
     .dest-grid { grid-template-columns: repeat(3, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -200,9 +160,9 @@
     .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
     nav { padding: 0 4rem; }
     .hamburger { display: none; }
-    .nav-menu { position: static; background: none; transform: none; padding: 0; display: flex; gap: 0.5rem; border: none; }
-    .nav-menu a { border-bottom: none; padding: 0 1rem; font-size: 0.72rem; }
-    .nav-menu a:hover { background: none; }
+    .nav-menu { position: static; background: none; transform: none; padding: 0; display: flex; gap: 0; border: none; }
+    .nav-menu a { padding: 0 1rem; border: none; font-size: 0.72rem; color: rgba(247,243,236,0.7); flex-direction: row; }
+    .nav-menu a:hover { padding-left: 1rem; color: var(--gold-light); }
     .skipper-grid { grid-template-columns: repeat(3, 1fr) !important; }
     .value-banner { padding: 5rem 4rem; }
     .quote-section { padding: 5rem 4rem; }
@@ -218,11 +178,9 @@
     <span>Sailing to Amalfi</span>
     <span>&amp; Sorrento Coast</span>
   </a>
-  
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
-
   <div class="nav-menu" id="navMenu">
     <a href="#">Home</a>
     <a href="#fleet"><span>Our</span><span>Fleet</span></a>
@@ -249,20 +207,4 @@
 
 <div class="value-banner" style="background-image:url('foto/hero2.jpg'); background-size:cover; background-position:center; position:relative;">
   <div style="position:absolute; inset:0; background:rgba(10,22,40,0.65);"></div>
-  <div style="max-width:700px; margin:0 auto; position:relative; z-index:1;">
-    <span class="section-label">Why Book Direct</span>
-    <h2 style="color:var(--cream);">Direct access, <em style="color:var(--gold-light);">authentic experiences</em>, and better value</h2>
-    <div class="gold-line"></div>
-    <p>By booking directly with us, you cut out the middleman — ensuring significant savings without compromising the premium quality and service you expect.</p>
-    <p>We are dedicated to providing superior quality, impeccable service, and an unparalleled sailing experience. To us, you aren't just a guest — <strong style="color:var(--gold-light); font-weight:400;">you're a friend.</strong></p>
-  </div>
-</div>
-
-<div style="overflow:hidden; aspect-ratio:16/7;">
-  <img src="foto/navigazione.jpeg" alt="Sailing Experience" style="width:100%; height:100%; object-fit:cover; display:block;">
-</div>
-
-<div id="fleet" class="fleet-section">
-  <div style="max-width:1200px; margin:0 auto;">
-    <span class="section-label">Our Fleet</span>
-    <h2>Experience
+  <div style="max-width:700px; margin:
