@@ -41,20 +41,21 @@
     border-bottom: 1px solid rgba(201,168,76,0.3); 
   }
 
-  /* LOGO - DUE RIGHE CENTRATE */
-  .nav-logo {
-    font-family: 'Cormorant Gramond', serif;
-    color: var(--gold-light);
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    line-height: 1.1;
+ /* LOGO - Entrambe le righe uguali */
+  .nav-logo span:first-child { 
+    font-size: 1.1rem; 
+    font-weight: 400; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em; 
   }
-  .nav-logo span:first-child { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; }
-  .nav-logo span:last-child { font-size: 0.75rem; font-weight: 300; opacity: 0.9; font-style: italic; }
-
+  .nav-logo span:last-child { 
+    font-size: 1.1rem; /* Uguale alla prima riga */
+    font-weight: 400; /* Uguale alla prima riga */
+    text-transform: uppercase; /* Tutto maiuscolo per uniformità */
+    letter-spacing: 0.05em;
+    opacity: 1; /* Piena visibilità */
+    font-style: normal; /* Rimosso l'italico */
+  }
   .hamburger { background: none; border: 1px solid rgba(201,168,76,0.4); cursor: pointer; padding: 8px; border-radius: 4px; display: flex; flex-direction: column; gap: 5px; }
   .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--gold-light); transition: all 0.3s; }
   .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
