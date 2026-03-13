@@ -41,20 +41,27 @@
     border-bottom: 1px solid rgba(201,168,76,0.3); 
   }
 
-/* LOGO - Entrambe le righe uguali */
-  .nav-logo span:first-child { 
+/* LOGO - Entrambe le righe con lo stesso colore oro pieno */
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold-light); /* Oro definito nelle variabili */
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.1;
+  }
+  
+  .nav-logo span:first-child, 
+  .nav-logo span:last-child { 
     font-size: 1.1rem; 
     font-weight: 400; 
     text-transform: uppercase; 
-    letter-spacing: 0.05em; 
-  }
-  .nav-logo span:last-child { 
-    font-size: 1.1rem; /* Uguale alla prima riga */
-    font-weight: 400; /* Uguale alla prima riga */
-    text-transform: uppercase; /* Tutto maiuscolo per uniformità */
     letter-spacing: 0.05em;
-    opacity: 1; /* Piena visibilità */
-    font-style: normal; /* Rimosso l'italico */
+    color: var(--gold-light); /* Forza lo stesso colore su entrambe */
+    opacity: 1; /* Rimuove ogni trasparenza */
+    font-style: normal; /* Rimuove il corsivo */
   }
   .hamburger { background: none; border: 1px solid rgba(201,168,76,0.4); cursor: pointer; padding: 8px; border-radius: 4px; display: flex; flex-direction: column; gap: 5px; }
   .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--gold-light); transition: all 0.3s; }
